@@ -1,15 +1,15 @@
 import React from 'react';
-import { Text, TouchableWithoutFeedback} from 'react-native';
+import {TouchableWithoutFeedback} from 'react-native';
 
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import {Button} from './styles';
+import {Button, Titulo} from './styles';
 
 export default function PayButton({onPress, focused}){
   return(
     <TouchableWithoutFeedback onPress={onPress}>
-       <Button>
+       <Button colors = {focused ? ['#fff','#ccc'] : ['#2AB451','#069322'] }>
         <Icons name='attach-money' size={30} color={focused ? '#000' : '#fff'}/>
-        <Text style={{color:'#fff', fontSize:10}}>Pagar</Text>
+        <Titulo focused={focused}>Pagar</Titulo>
       </Button>
     </TouchableWithoutFeedback>
   )
