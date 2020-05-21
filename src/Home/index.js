@@ -8,6 +8,7 @@ import { Container, Header, HeaderSaldo, HeaderTitle, HeaderSubTitle} from './st
 import Suggestion from '../../src/components/Suggestion';
 import Activities from '../../src/components/Activities';
 import Tips from '../components/Tips';
+import Banner from '../components/Banner';
 export default class Home extends Component{
   constructor(props){
     super(props)
@@ -35,6 +36,7 @@ export default class Home extends Component{
           <Suggestion/>
           <Activities/>
           <Tips/>
+          <Banner/>
 
 
         </ScrollView>

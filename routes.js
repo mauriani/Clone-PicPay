@@ -1,4 +1,5 @@
 import * as React from 'react';
+import{StatusBar}from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -13,13 +14,14 @@ import Pagar from './src/Pagar';
 import Notificacoes from './src/Notificacoes';
 import Ajustes from './src/Ajustes';
 
-
 const Tab = createBottomTabNavigator();
+
 
 export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator  
+      initialRouteName = "Pagar"
         screenOptions={({ route, navigation, focused }) => ({
           tabBarIcon: ({ color, size }) => {
           let iconName;
@@ -29,9 +31,10 @@ export default function App() {
             return <Ionicons name={iconName} size={size} color={color} />
           } 
           else if(route.name === 'Carteira'){
+
             iconName='credit-card'
-            return <MaterialIcons name={iconName} size={size} color={color} />
-          } 
+            return <MaterialIcons name={iconName} size={size} color={color} /> 
+          }
           else if(route.name === 'Pagar'){
             return (
               <PayButton
@@ -58,7 +61,7 @@ export default function App() {
         style:{
           backgroundColor:'#06050B',
           borderTopColor:'rgba(255,255,255,0.2)'
-        }
+        },
       }
     }>
         <Tab.Screen 
@@ -73,7 +76,7 @@ export default function App() {
         name="Carteira" 
         component={Carteira} 
         options ={{
-          title:'Carteira'
+          title:'Carteira',
         }}
         />
         <Tab.Screen 
