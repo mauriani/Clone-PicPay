@@ -10,8 +10,7 @@ import {
 
 import List from '../components/List';
 
-
-export default class Pagar extends Component{
+export default class Notificacoes extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -19,8 +18,6 @@ export default class Pagar extends Component{
     }
   }
   
-
-
 
   render(){
     return(

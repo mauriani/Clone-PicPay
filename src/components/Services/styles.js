@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 0 16px;
 `;
 
@@ -12,7 +12,7 @@ export const Header = styled.View`
 export const Titulo = styled.Text`
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   
 `;
 
@@ -21,6 +21,7 @@ export const ContainerLista = styled.View`
   align-items: center;
   background-color: #1e222b;
   border-radius: 20px;
+  height: 95px;
   padding: 8px;
   margin-top: 10px;
 `;
@@ -40,7 +41,7 @@ export const Image = styled.Image`
 export const Title = styled.Text`
   color: #fff;
   padding: 0 16px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
 `;
 
