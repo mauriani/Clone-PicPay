@@ -187,7 +187,7 @@ export const Titulo = styled.Text`
 `;
 
 
-export const Codigo = styled.View`
+export const Codigo = styled.TouchableOpacity`
   flex-direction: row;
   margin-top: 25px;
   align-items:center;

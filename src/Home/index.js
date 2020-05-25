@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {ScrollView} from 'react-native';
+
+
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconM from 'react-native-vector-icons/MaterialIcons';
+
 
 import { Container, Header, HeaderSaldo, HeaderTitle, HeaderSubTitle} from './styles';
 

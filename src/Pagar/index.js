@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import {TextInput} from 'react-native';
+import {TextInput, View} from 'react-native';
 import { 
   Container, 
   Header, 
-  SearchContainer
+  SearchContainer,
+  Title,
 } from './styles';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconM from 'react-native-vector-icons/MaterialCommunityIcons';
+
+
+import Suggestion from '../components/Suggestion';
+import Services from '../components/Services';
 export default class Pagar extends Component{
   constructor(props){
     super(props)
     this.state = {
-      switchValue: false 
+     
     }
   }
-
   
 
 
@@ -34,6 +38,12 @@ export default class Pagar extends Component{
 
             </SearchContainer>
         </Header>
+        <View>
+          <Title>Principais</Title>
+          <Suggestion/>
+        </View>
+        
+       <Services/>
       </Container>
     )
   }

@@ -9,9 +9,12 @@ export const Container = styled.SafeAreaView`
 
 export const Header = styled.View`
   flex-direction: row;
+  height: 50px;
   align-items:center;
   margin-left: 15px;
+  margin-bottom: 20px;
 `;
+
 export const SearchContainer = styled.View`
   flex-direction: row;
   align-items: center;
@@ -21,4 +24,12 @@ export const SearchContainer = styled.View`
   height: 50px;
   width: 330px;
   border-radius: 20px;
+`;
+
+export const Title = styled.Text`
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  color: #fff;
+  font-weight: bold;
 `;

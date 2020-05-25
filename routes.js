@@ -21,7 +21,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator  
-      initialRouteName = "Pagar"
+      initialRouteName = "Notificacoes"
         screenOptions={({ route, navigation, focused }) => ({
           tabBarIcon: ({ color, size }) => {
           let iconName;
