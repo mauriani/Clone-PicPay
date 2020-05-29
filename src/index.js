@@ -7,7 +7,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 export default function src(){
   return(
     <SafeAreaProvider>
-      <StatusBar barStyle="light-content" backgroundColor={'#06050B'} />
+      <StatusBar backgroundColor="transparent" translucent barStyle ="light-content" />
       <Routes/>
     </SafeAreaProvider>
   )

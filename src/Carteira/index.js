@@ -36,7 +36,7 @@ import { Container,
 import { Switch } from 'react-native-gesture-handler';
 
 import Icon from 'react-native-vector-icons/Entypo';
-import IconS from 'react-native-vector-icons/SimpleLineIcons';
+import IconM from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconI from 'react-native-vector-icons/Ionicons';
 import IconF from 'react-native-vector-icons/FontAwesome';
 import IconFA from 'react-native-vector-icons/FontAwesome5';
@@ -45,22 +45,40 @@ import IconA from 'react-native-vector-icons/AntDesign';
 
 
 import cartao from '../components/images/credit-card.png';
+import { StatusBar } from 'react-native';
 export default class Home extends Component{
   constructor(props){
     super(props)
     this.state = {
-      switchValue: false 
+      switchValue: true,
+      isVisible: true,
     }
   }
+
+  onPressVisible = () =>{
+    this.setState({
+      isVisible: !this.state.isVisible,
+    })
+  }
+
+onPressSwitchValue = () =>{
+  this.setState({
+    switchValue: !this.state.switchValue,
+  })
+}
+
 
 
   render(){
     return(
       <Container>
-        <Header>
-
+        <Header
+          colors={
+            this.state.switchValue ? ['#52EC87','#1AB563'] : ['#d3d3d3','#868686'] 
+          }
+        >
           <BlocoIcon>
-            <ButtonIcon>
+            <ButtonIcon backgroundColor={this.state.switchValue ? '#52EC87': '#d3d3d3'}>
               <Icon name='bar-graph' size={16} color={'#fff'}/>
             </ButtonIcon>
           </BlocoIcon>
@@ -72,11 +90,11 @@ export default class Home extends Component{
             <BalanceContainer>
 
               <TitleSaldo> 
-                R$ <Bold>1200,00</Bold>
+                R$ <Bold>{this.state.isVisible ? '1200,00' : '----'}</Bold>
               </TitleSaldo>
 
-              <ContainerEye>
-                <IconS name={'eye'} color={'#fff'} size={30}/>
+              <ContainerEye onPress={this.onPressSwitchValue}>
+                <IconM name={this.state.switchValue ? 'eye': 'eye-off'} color={'#fff'} size={30}/>
               </ContainerEye>
 
             </BalanceContainer>

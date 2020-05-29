@@ -3,7 +3,7 @@ import {getStatusBarHeight} from 'react-native-status-bar-height';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  padding-top: ${30 + getStatusBarHeight(true)}px;
+  padding-top: ${50 + getStatusBarHeight(true)}px;
   background-color: #06050B;
 `;
 

@@ -8,20 +8,25 @@ export const Container = styled.View`
 `;
 
 export const Header = styled(LinerGradient).attrs({
-  colors: ['#52EC87','#1AB563'],
   start: {x: 1,y: 0.2},
 })`
   height: 320px;
 `;
 
+export const HeaderContainer = styled.SafeAreaView`
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`;
+
 export const BlocoIcon = styled.View`
   flex-direction: row;
   justify-content: flex-end;
-  margin:8px;
+  margin-top:30px;
+  margin-right:5px;
 `;
 
 export const ButtonIcon = styled.TouchableOpacity`
-  background-color: #52EC87;
   border-radius: 20px;
   border-color: #fff;
   border-width: 2px;
@@ -34,11 +39,7 @@ export const ButtonIcon = styled.TouchableOpacity`
   align-self: flex-start;
 `;
 
-export const HeaderContainer = styled.SafeAreaView`
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-`;
+
 
 export const BalanceContainer = styled.View`
   margin: 10px 0;
@@ -63,7 +64,7 @@ export const TitleSaldo = styled.Text`
   font-weight: 200;
 `;
 
-export const ContainerEye = styled.View`
+export const ContainerEye = styled.TouchableOpacity`
   margin-left: 10px;
 `;
 

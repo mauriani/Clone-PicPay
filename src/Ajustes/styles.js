@@ -7,7 +7,7 @@ export const Container = styled.ScrollView`
 
 export const ContainerPerfil = styled.SafeAreaView`
   background-color: #1e222b;
-  height: 310px;
+  height: 330px;
 `;
 
 export const CardTop = styled.View`
@@ -18,6 +18,7 @@ export const CardTop = styled.View`
 
 export const Title = styled.Text`
   font-size: 17px;
+  margin-top: 10px;
   color: #2AB451;
   font-weight: bold;
 `;
